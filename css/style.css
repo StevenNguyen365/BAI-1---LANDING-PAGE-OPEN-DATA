@@ -14,23 +14,31 @@
 
 body {
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    /* max-width: 1920px;
-    flex-basis: 1920px; */
 }
 
 /* Phan Header */
 
 header {
-    width: 1920px;
+    max-width: 1920px;
     /* background: linear-gradient(85deg, #5F9FFF -3.78%, #5D34EC 103.8%); */
     background-image: url(../data/header-background.png);
+    background-repeat: no-repeat;
+    background-size: cover;
     padding: 0 300px;
 }
 
 .header {
+    max-width: 1320px;
+}
+
+.header-top {
     display: flex;
     padding-top: 15px;
     align-items: center;
+}
+
+.hide-menu {
+    display: none;
 }
 
 .logo {
@@ -188,21 +196,24 @@ header {
 
 /* Phan main */
 main {
-    width: 1920px;
+    max-width: 1920px;
 }
 
 /* About */
 .about {
     padding: 60px 300px;
-    display: flex;
     width: 100%;
-    height: 570px;
-    gap: 84px;
+    /* height: 570px; */
     margin: 0;
 }
 
+.about-cont {
+    max-width: 1320px;
+    display: flex;
+    gap: 84px;
+}
+
 .about-img {
-    position: relative;
     width: 620px;
 }
 
@@ -268,6 +279,9 @@ main {
 
 .feature {
     padding: 60px 300px;
+}
+
+.feature-cont {
     display: flex;
     flex-direction: column;
     gap: 40px;
@@ -294,7 +308,7 @@ main {
 .feature-content {
     display: flex;
     flex-direction: column;
-    width: 660px;
+    max-width: 660px;
     gap: 24px;
 }
 
@@ -340,6 +354,7 @@ main {
 }
 
 .feature-img img {
+    position: relative;
     width: 147.2%;
     height: 92%;
 }
@@ -361,6 +376,9 @@ main {
 
 .function {
     padding: 60px 300px;
+}
+
+.funct-cont {
     display: flex;
     flex-direction: column;
     gap: 60px;
@@ -449,6 +467,9 @@ main {
 
 .application {
     padding: 60px 300px;
+}
+
+.app-cont {
     display: flex;
     gap: 38px;
     flex-direction: column;
@@ -505,8 +526,11 @@ main {
 /* award */
 
 .award {
-    display: flex;
     padding: 60px 300px;
+}
+
+.award-cont {
+    display: flex;
     justify-content: space-between;
 }
 
@@ -577,9 +601,18 @@ main {
 .news {
     /* background: linear-gradient(45deg, #5F9FFF -19.75%, #5D34EC 114.5%); */
     background-image: url(../data/news-background.png);
+    padding: 80px 300px;
+}
+
+.news-cont {
     display: flex;
     justify-content: space-between;
-    padding: 80px 300px;
+}
+
+.news-box {
+    display: flex;
+    justify-content: center;
+    gap: 24px;
 }
 
 .news h2 {
@@ -667,9 +700,12 @@ main {
 /* contact */
 
 .contact {
+    padding: 60px 300px;
+}
+
+.contact-cont {
     display: flex;
     flex-direction: column;
-    padding: 60px 300px;
     gap: 40px;
 }
 
@@ -843,7 +879,7 @@ main {
 /* footer */
 footer {
     display: flex;
-    width: 1920px;
+    max-width: 1920px;
     padding: 12px 300px;
     justify-content: space-between;
     align-items: center;
@@ -884,6 +920,734 @@ footer p {
 
 
 /* responsive */
-/* @media only screen and (max-width: ) {
-    
-} */
+
+@media screen and (min-width: 1920px) {
+
+    main,
+    header,
+    footer {
+        margin: 0 auto;
+    }
+}
+
+@media screen and (min-width: 1440px) and (max-width: 1919px) {
+    main {
+        max-width: 1919px;
+    }
+
+    header {
+        padding: 0;
+    }
+
+    .header {
+        margin: 0 auto;
+    }
+
+    .about {
+        padding: 50px 0;
+    }
+
+    .about-cont {
+        margin: 0 auto;
+    }
+
+    .feature {
+        padding: 50px 0;
+    }
+
+    .feature-cont {
+        max-width: 1320px;
+        margin: 0 auto;
+    }
+
+    /* .feature-img{
+        width: 50%;
+    } */
+    .feature-img img {
+        max-width: 105%;
+        height: auto;
+    }
+
+    /* .feature-content {
+        padding-left: 10%;
+    } */
+
+    .function {
+        padding: 0;
+    }
+
+    .funct-cont {
+        max-width: 1320px;
+        margin: 0 auto;
+    }
+
+    .application {
+        padding: 60px 0;
+    }
+
+    .app-cont {
+        margin: 0 auto;
+    }
+
+    .award {
+        padding: 60px 0;
+    }
+
+    .award-cont {
+        max-width: 1320px;
+        margin: 0 auto;
+    }
+
+    .news {
+        padding: 60px 0;
+    }
+
+    .news-cont {
+        max-width: 1320px;
+        margin: 0 auto;
+    }
+
+
+
+    .contact {
+        padding: 60px 0;
+    }
+
+    .contact-cont {
+        max-width: 1320px;
+        margin: 0 auto;
+    }
+}
+
+@media screen and (min-width: 320px) and (max-width: 1919px) {
+    footer {
+        padding: 10px;
+        justify-content: space-around;
+    }
+
+    header {
+        padding: 0;
+    }
+
+    .about,
+    .feature,
+    .function,
+    .application,
+    .award,
+    .news,
+    .contact {
+        padding: 40px 0;
+    }
+
+    .header,
+    .about-cont,
+    .feature-cont,
+    .function-cont,
+    .app-cont,
+    .award-cont,
+    .news-cont,
+    .contact-cont {
+        margin: 0 auto;
+    }
+
+}
+
+@media screen and (max-width: 1440px) {
+
+    .header,
+    .about-cont,
+    .funct-cont,
+    .award-cont,
+    .news-cont,
+    .contact-cont {
+        max-width: 1280px;
+        padding: 0 30px;
+    }
+
+    .header-top {
+        font-size: 90%;
+    }
+
+    .logo {
+        max-width: 500px;
+    }
+
+    .feature-cont {
+        max-width: 1280px;
+        padding: 0 0 0 30px;
+    }
+
+    .feature-content {
+        gap: 12px;
+    }
+
+    .feature-text {
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+    }
+
+    .feature-img img {
+        width: 100%;
+        height: auto;
+    }
+
+    .funct-cont {
+        gap: 48px;
+    }
+
+    .news-cont {
+        flex-direction: column;
+        gap: 40px;
+    }
+
+    .news-cont h2 {
+        width: 100%;
+        text-align: center;
+    }
+}
+
+@media screen and (max-width: 1280px) {
+    .header-top {
+        font-size: 89%;
+    }
+
+    .logo {
+        width: 35%;
+    }
+
+    .header-content {
+        width: 55%;
+    }
+
+    .header-content h1 {
+        font-size: 35px;
+    }
+
+    .header-content span {
+        font-size: 35px;
+    }
+
+    .header-content p {
+        font-size: 16px;
+        width: 80%;
+    }
+
+    .about-cont {
+        gap: 30px;
+    }
+
+    .about-img img {
+        width: 450px;
+    }
+
+    .about-content h2 {
+        font-size: 30px;
+        line-height: 30px;
+    }
+
+    .about-content p {
+        font-size: 16px;
+        line-height: 25px;
+    }
+
+    .feature-cont h2 {
+        font-size: 30px;
+        line-height: 30px;
+    }
+
+    .feature-content {
+        max-width: 500px;
+        gap: 15px;
+    }
+
+    .feature-box {
+        align-items: center;
+    }
+
+    .feature-text {
+        display: none;
+    }
+
+    .feature-img img {
+        width: 100%;
+        height: auto;
+    }
+
+    .funct-cont {
+        gap: 30px;
+    }
+
+    .funct-cont h2 {
+        font-size: 30px;
+        line-height: 30px;
+    }
+
+    .function-text p {
+        padding: 0 16px;
+        line-height: 24px;
+    }
+
+    .function-text p span {
+        line-height: 24px;
+    }
+
+    .function-center img {
+        width: 100%;
+    }
+
+    .function-img {
+        top: -250px;
+        left: -150px;
+        width: 150% !important;
+    }
+
+    .function-right {
+        gap: 70px;
+    }
+
+    .app-cont h2 {
+        font-size: 30px;
+        line-height: 30px;
+    }
+
+    .app-text p {
+        font-size: 18px;
+    }
+
+    .app1 {
+        left: 20px;
+    }
+
+    .app2 {
+        right: 20px;
+    }
+
+    .award-content h2 {
+        font-size: 29px;
+        line-height: 30px;
+    }
+
+    .award-logo {
+        padding: 0;
+        width: 50%;
+    }
+
+    .news-cont h2 {
+        font-size: 30px;
+        line-height: 30px;
+    }
+
+    .news-box {
+        gap: 12px;
+    }
+
+    .news-article {
+        width: 300px;
+    }
+
+    .news-img img {
+        width: 100%;
+    }
+
+    .contact-cont h2 {
+        font-size: 30px;
+        line-height: 30px;
+    }
+
+    .contact-info2 {
+        flex-direction: column;
+    }
+}
+
+@media screen and (max-width: 1139px) {
+    .header-top {
+        font-size: 89%;
+    }
+
+    .logo {
+        width: 35%;
+    }
+
+    .header-content {
+        width: 55%;
+    }
+
+    .header-content h1 {
+        font-size: 30px;
+    }
+
+    .header-content span {
+        font-size: 30px;
+    }
+
+    .header-content p {
+        font-size: 16px;
+        width: 90%;
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    .header-top {
+        justify-content: space-between;
+        padding-bottom: 12px;
+    }
+
+    .hide-menu {
+        display: inline;
+        width: 10%;
+    }
+
+    .hide-menu svg {
+        font-size: 40px;
+    }
+
+    .menu {
+        display: none;
+    }
+
+    .logo {
+        display: flex;
+        width: 90%;
+        text-align: center;
+        /* justify-content: center; */
+        position: relative;
+        left: 15%;
+        margin: 0 auto;
+    }
+
+    .header-content {
+        width: 80%;
+    }
+
+    .header-content h1 {
+        font-size: 24px;
+    }
+
+    .header-content span {
+        font-size: 24px;
+    }
+
+    .header-img img {
+        padding: 80px 0;
+    }
+
+    .about-cont,
+    .feature-cont {
+        max-width: 768px;
+    }
+
+    .about-img img {
+        width: 150px;
+    }
+
+    .about-content {
+        max-width: 500px;
+    }
+
+    .about-content p {
+
+        width: 100%;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+    }
+
+    .feature-img img {
+        display: none;
+    }
+
+    .feature-content {
+        max-width: 100%;
+    }
+
+    .function-center {
+        display: none;
+    }
+
+    .dot-slide {
+        display: none;
+    }
+
+    .function-right {
+        gap: 50px;
+    }
+
+    .app-cont {
+        padding: 0 10px;
+    }
+
+    .app1 {
+        left: 10px;
+    }
+
+    .app2 {
+        right: 40px;
+    }
+
+    .app-text {
+        max-width: 768px;
+        margin: 0 auto;
+    }
+
+    .award-cont {
+        align-items: center;
+    }
+
+    .award-logo {
+        width: 50%;
+        height: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .award-content h2 {
+        line-height: 30px;
+    }
+
+    .news-box {
+        flex-wrap: wrap;
+    }
+
+    .contact-box {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .contact-box svg {
+        flex-shrink: 0;
+        text-align: center;
+    }
+
+    .contact-text {
+        text-align: center;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .logo {
+        justify-content: flex-end;
+        left: 0;
+    }
+
+    .header-info {
+        flex-direction: column;
+    }
+
+    .header-content {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .header-img {
+        display: none
+    }
+
+    .about-content {
+        max-width: 60%;
+    }
+
+    .about-content h2 {
+        font-size: 24px;
+        line-height: 24px;
+    }
+
+    .feature-cont h2 {
+        font-size: 24px;
+        line-height: 24px;
+    }
+
+    .feature-title {
+        font-size: 16px;
+        line-height: 20px;
+    }
+
+    .funct-cont h2 {
+        font-size: 24px;
+        line-height: 24px;
+    }
+
+    .function-content {
+        gap: 24px;
+    }
+
+    .function-left {
+        width: 50%;
+        flex-shrink: 0;
+    }
+
+    .function-right {
+        width: 50%;
+        flex-shrink: 0;
+    }
+
+    .function-text p {
+        padding: 0;
+    }
+
+    .app-cont h2 {
+        font-size: 24px;
+        line-height: 30px;
+        padding: 0 60px;
+    }
+
+    .app-text {
+        max-width: 400px;
+    }
+
+    .app-text p {
+        font-size: 16px;
+    }
+
+    .award-content h2 {
+        font-size: 24px;
+        line-height: 24px;
+        text-align: center;
+    }
+
+    .award-text p {
+        font-size: 16px;
+    }
+
+    .award-logo {
+        display: none;
+    }
+
+    .news-cont h2 {
+        font-size: 24px;
+        line-height: 24px;
+    }
+
+    .contact-cont h2 {
+        font-size: 24px;
+        line-height: 24px;
+    }
+
+    .contact-info1 {
+        flex-direction: column;
+    }
+
+    footer p {
+        font-size: 12px;
+    }
+
+    #goTop {
+        right: 20px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+
+    .header,
+    .about-cont,
+    .funct-cont,
+    .award-cont,
+    .news-cont,
+    .contact-cont,
+    .feature-cont,
+    .app-cont {
+        padding: 0 24px;
+    }
+
+    .hide-menu svg {
+        font-size: 30px;
+    }
+
+    .header-content h1 {
+        font-size: 20px;
+        line-height: 28px;
+    }
+
+    .header-content span {
+        font-size: 20px;
+        line-height: 28px;
+    }
+
+    .header-content button {
+        padding: 4px 8px;
+        font-size: 13px;
+    }
+
+    .about-cont {
+        flex-direction: column;
+    }
+
+    .about-img {
+        max-width: 100%;
+        text-align: center;
+    }
+
+    .about-content {
+        max-width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .about-content h2{
+        text-align: center;
+    }
+   .function-content{
+    flex-direction: column;
+   }
+   .function-left,
+   .function-right{
+    width: 100%;
+    text-align: justify;
+    gap: 24px;
+   }
+   .app-cont h2{
+    padding: 0;
+   }
+   .app-text{
+    max-width: 100%;
+    padding: 0;
+   }
+   .app1, .app2{
+    width: 20%;
+   }
+   .app1{
+    top: -55px;
+    left: -10px;
+   }
+   .app2{
+    bottom: -50px;
+    right: -15px;
+   }
+   .award-content{
+    gap: 24px;
+   }
+   .award-content h2{
+    text-align: center;
+    line-height: 30px;
+   }
+   .award-box{
+    gap: 30px;
+   }
+   .award-box1{
+    width: 50px;
+    height: 50px;
+   }
+   .award-box1 img{
+    width: 50%;
+    height: 50%;
+   }
+   .news-article{
+    max-width: 250px;
+   }
+   .contact-box{
+    padding: 12px;
+   }
+   .contact-text h4{
+    font-size: 16px;
+    line-height: 20px;
+   }
+   .contact-block2{
+    flex-direction: column;
+   }
+   footer p{
+    line-height: 13px;
+   }
+}
+
+/* @media screen and (max-width: 320px) {} */
