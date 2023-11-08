@@ -713,6 +713,25 @@ main {
     padding: 8px;
     position: relative;
     cursor: pointer;
+    transition: 0.3s;
+    overflow: hidden;
+}
+
+.news-img2 {
+    overflow: hidden;
+    border-radius: 8px;
+    transition: all 0.3s ease-in-out;
+}
+
+.news-img2 img {
+    width: 100%;
+    height: auto;
+    display: block;
+    transition: all 0.3s ease-in-out;
+}
+
+.news-img2 img:hover {
+    transform: scale(1.2);
 }
 
 .news-time {
@@ -1118,7 +1137,8 @@ footer p {
         max-width: 1320px;
         margin: 0 auto;
     }
-    .article-cont{
+
+    .article-cont {
         max-width: 1320px;
         margin: 0 auto;
     }
@@ -1134,9 +1154,11 @@ footer p {
     .menu-section {
         padding: 0;
     }
-    article{
+
+    article {
         padding: 60px 0 !important;
     }
+
     .about,
     .feature,
     .function,
@@ -1898,16 +1920,20 @@ article p {
     line-height: 35.2px;
     padding-bottom: 12px;
 }
-article p a{
+
+article p a {
     text-decoration: none;
     color: black;
 }
-article p a:hover{
+
+article p a:hover {
     color: rgb(53, 153, 211);
 }
-article p span{
+
+article p span {
     font-weight: bold;
 }
+
 .article-cont {
     width: 100%;
 }
@@ -1933,6 +1959,7 @@ article p span{
 
 .article-image img {
     width: 100%;
+    height: auto;
     padding-bottom: 12px;
 }
 
@@ -1957,4 +1984,52 @@ article p span{
 .ten-tac-gia {
     font-style: normal;
     font-weight: bold;
+}
+
+.relate-article{
+    padding-top: 60px;
+}
+.relate-title{
+    font-size: 30px;
+    line-height: 36px;
+    font-weight: bold;
+    color: #FF6A00;
+    padding-bottom: 24px;
+}
+
+.relate-article p{
+    color: #0A64A3;
+    cursor: pointer;
+}
+.relate-article p:hover{
+    color: #50aef1;
+}
+.relate-article p span{
+    color: #333333;
+    font-size: 16px;
+    font-weight: 400;
+    padding-left: 10px;
+}
+
+.listPage{
+    padding: 10px;
+    text-align: right;
+    list-style: none;
+}
+
+.listPage li{
+    display: inline-block;
+    padding: 10px 15px;
+    margin: 0 10px;
+    cursor: pointer;
+    font-size: 22px;
+}
+.listPage .pagination-active{
+    background-color: #ff6a00;
+    color: white;
+}
+
+.listPage li:hover{
+    background-color: #ff6a00;
+    color: white;
 }

@@ -1,3 +1,4 @@
+
 /* Go to top */
 
 var toTop = document.getElementById("goTop")
@@ -51,7 +52,7 @@ var menuList = document.querySelector(".menu-items");
 menuIcon.addEventListener("click", function (event) {
     if (menuIcon.contains(event.currentTarget)) {
         menuList.classList.toggle("show-menu");
-    }else{
+    } else {
         menuList.classList.remove("show-menu");
     }
 });
@@ -66,20 +67,22 @@ function showSlides() {
     var slides = document.getElementsByClassName("myslide");
     var dots = document.getElementsByClassName("dot");
     for (i = 0; i < slides.length; i++) {
-       slides[i].style.display = "none";  
+        slides[i].style.display = "none";
     }
     for (i = 0; i < dots.length; i++) {
         dots[i].className = dots[i].className.replace(" active", "");
     }
 
-    slides[slideIndex].style.display = "block";  
+    if (slides) {
+        slides[slideIndex].style.display = "block";
+    }
     dots[slideIndex].className += " active";
     //chuyển đến slide tiếp theo
     slideIndex++;
     //nếu đang ở slide cuối cùng thì chuyển về slide đầu
     if (slideIndex > slides.length - 1) {
-      slideIndex = 0
-    }    
+        slideIndex = 0
+    }
     //tự động chuyển đổi slide sau 5s
     // setTimeout(showSlides, 5000);
 }
@@ -88,7 +91,7 @@ showSlides(slideIndex = 0);
 
 
 function currentSlide(n) {
-  showSlides(slideIndex = n);
+    showSlides(slideIndex = n);
 }
 
 /* slide-show application */
@@ -100,20 +103,21 @@ function showSlides2() {
     var slides = document.getElementsByClassName("text-myslide");
     var dots = document.getElementsByClassName("text-dot");
     for (i = 0; i < slides.length; i++) {
-       slides[i].style.display = "none";  
+        slides[i].style.display = "none";
     }
     for (i = 0; i < dots.length; i++) {
         dots[i].className = dots[i].className.replace(" active", "");
     }
 
-    slides[slideIndex2].style.display = "block";  
+
+    slides[slideIndex2].style.display = "block";
     dots[slideIndex2].className += " active";
     //chuyển đến slide tiếp theo
     slideIndex2++;
     //nếu đang ở slide cuối cùng thì chuyển về slide đầu
     if (slideIndex2 > slides.length - 1) {
-      slideIndex2 = 0
-    }    
+        slideIndex2 = 0
+    }
     //tự động chuyển đổi slide sau 5s
     // setTimeout(showSlides, 5000);
 }
@@ -122,5 +126,5 @@ showSlides2(slideIndex2 = 0);
 
 
 function currentSlide2(n) {
-  showSlides2(slideIndex2 = n);
+    showSlides2(slideIndex2 = n);
 }
