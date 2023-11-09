@@ -29,7 +29,7 @@ toTop.addEventListener('click', () => {
     anchor.addEventListener('click', function (e) {
         e.preventDefault();
 
-        document.querySelector(this.getAttribute('href')).scrollIntoView({
+        document.querySelector(this.getAttribute('href')).scrollTo({
             behavior: 'smooth'
         });
     });
