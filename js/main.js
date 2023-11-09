@@ -25,7 +25,7 @@ toTop.addEventListener('click', () => {
 });
 
 /* Di chuyen den muc tieu thanh phan */
-document.querySelectorAll('#menu a[href^="#"]').forEach(anchor => {
+/* document.querySelectorAll('#menu a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
         e.preventDefault();
 
@@ -43,7 +43,7 @@ document.querySelectorAll('#hide-menu a[href^="#"]').forEach(anchor => {
             behavior: 'smooth'
         });
     });
-});
+}); */
 
 /* Nut menu-mobile */
 var menuIcon = document.querySelector(".hide-menu")
@@ -119,7 +119,7 @@ function showSlides2() {
         slideIndex2 = 0
     }
     //tự động chuyển đổi slide sau 5s
-    // setTimeout(showSlides, 5000);
+    // setTimeout(showSlides2, 5000);
 }
 //mặc định hiển thị slide đầu tiên 
 showSlides2(slideIndex2 = 0);
