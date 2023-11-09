@@ -975,7 +975,7 @@ footer p {
     background: #FF8024;
 }
 #goTop:hover svg{
-    transform: translateY(-50px);
+    transform: translateY(-48px);
     fill: white;
 }
 /* #goTop svg:hover{
