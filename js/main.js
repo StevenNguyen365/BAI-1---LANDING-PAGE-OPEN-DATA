@@ -10,19 +10,21 @@ window.onscroll = function () {
 function scrollFunction() {
     if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
         toTop.style.display = "block"
+        document.getElementById("header-menu").style.background = "linear-gradient(85deg, #5F9FFF -3.78%, #5D34EC 103.8%)"
     } else {
         toTop.style.display = "none"
+        document.getElementById("header-menu").style.background = "none"
     }
 }
 
-/* function goTop(){
-    document.body.scrollTop = 0
-    document.documentElement.scrollTop = 0
-} */
 
 toTop.addEventListener('click', () => {
     window.scrollTo({ top: 0, behavior: 'smooth' });
 });
+/* function goTop(){
+    document.body.scrollTop = 0
+    document.documentElement.scrollTop = 0
+} */
 
 /* Di chuyen den muc tieu thanh phan */
 /* document.querySelectorAll('#menu a[href^="#"]').forEach(anchor => {
